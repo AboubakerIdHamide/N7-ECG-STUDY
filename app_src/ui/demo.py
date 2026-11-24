@@ -43,10 +43,10 @@ def render_demo():
         ax.set(xlim=(0, 10), xlabel="Temps (secondes)", ylabel="Amplitude du signal (mV)")
         ax.grid(alpha=0.2)
         fig.tight_layout()
-        st.pyplot(fig, use_container_width=True)
+        st.pyplot(fig, width="stretch")
         plt.close(fig)
 
-    if st.button("Prédire le rythme", type="primary", use_container_width=True):
+    if st.button("Prédire le rythme", type="primary", width="stretch"):
         with st.spinner("Le modèle traite la fenêtre…"):
             result = predict_window(jalon, window, age=age, sex_code=sex_code)
         st.session_state["cardiopatch_result"] = (jalon, sample_position, result)
@@ -75,7 +75,7 @@ def render_demo():
         ax_scores.set(xlim=(0, 100), xlabel="Score du modèle (%)")
         ax_scores.grid(axis="x", alpha=0.2)
         fig_scores.tight_layout()
-        st.pyplot(fig_scores, use_container_width=True)
+        st.pyplot(fig_scores, width="stretch")
         plt.close(fig_scores)
         st.caption("Scores produits par le modèle ; ils ne sont pas garantis comme probabilités calibrées.")
 
@@ -84,7 +84,7 @@ def render_demo():
             st.dataframe(
                 pd.DataFrame(result["extra"]["features"], columns=["Descripteur", "Valeur"]),
                 hide_index=True,
-                use_container_width=True,
+                width="stretch",
             )
         st.info(
             "Le notebook ne contenait pas le fichier de poids du MLP. Le poids fourni "
@@ -98,7 +98,7 @@ def render_demo():
                 st.dataframe(
                     pd.DataFrame(beats, columns=["Intervalle RR (s)", "Amplitude QRS (mV)"]),
                     hide_index=True,
-                    use_container_width=True,
+                    width="stretch",
                 )
             else:
                 st.info("Aucun intervalle RR n’a été détecté dans cette fenêtre par le détecteur reconstruit.")
