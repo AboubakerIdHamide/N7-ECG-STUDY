@@ -1,0 +1,8 @@
+﻿jalon,experience,graine,architecture,exactitude_validation,f1_macro_validation,rappel_classes_0_a_4,parametres,taille_poids_mo,latence_mediane_ms,statut,notes
+2,3_blocs_k7_GAP,42,"3 blocs, noyau 7, agrégation gap",0.748,0.779,0.559 / 0.979 / 0.942 / 0.894 / 0.900,20389,0.082,6.34,réalisé,validation Holter A ; 12 époques ; test non consulté
+2,4_blocs_k7_GAP,42,"4 blocs, noyau 7, agrégation gap",0.976,0.973,0.966 / 0.996 / 0.976 / 0.980 / 0.989,49125,0.197,7.75,réalisé,validation Holter A ; 12 époques ; test non consulté
+2,4_blocs_k11_GAP,42,"4 blocs, noyau 11, agrégation gap",0.993,0.993,0.991 / 1.000 / 0.990 / 1.000 / 0.989,75813,0.303,7.97,réalisé,validation Holter A ; 12 époques ; test non consulté
+2,4_blocs_k7_flatten,42,"4 blocs, noyau 7, agrégation flatten",0.977,0.977,0.984 / 0.992 / 0.938 / 1.000 / 0.961,208869,0.835,7.96,réalisé,validation Holter A ; 12 époques ; test non consulté
+2,transfert_patch_sans_AE,42,4_blocs_k11_GAP,,0.836,0.821 / 0.833 / 1.000 / 0.778 / 0.760,,,,réalisé,"CNN appris sur Holter A, évalué sur validation patch B sans débruitage"
+2,transfert_patch_avec_AE_Holter,42,4_blocs_k11_GAP + AE Holter,,0.6758,0.806 / 0.167 / 1.000 / 0.778 / 0.480,,,,réalisé,validation patch B après autoencodeur entraîné sur Holter A
+2,autoencodeur_Holter_A,42,encodeur-décodeur Conv1D,,,,,,,réalisé,Holter A ; 1200 fenêtres train et 300 validation ; 25 époques ; MSE val=0.1176

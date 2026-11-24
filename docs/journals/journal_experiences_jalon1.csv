@@ -1,0 +1,10 @@
+﻿jalon,experience,graine,descripteurs,perte,epoques,taille_lot,exactitude_validation,f1_macro_validation,rappel_classe_1_validation,notes
+1,perte_entropie_croisee_simple,42,11 descripteurs de base reconstruits,entropie_croisee_simple,60,64,0.9716666666666667,0.9698851406145561,0.9369747899159664,même MLP et mêmes ensembles ; classes pondérées uniquement pour la perte pondérée
+1,perte_entropie_croisee_ponderee,42,11 descripteurs de base reconstruits,entropie_croisee_ponderee,60,64,0.9444444444444444,0.9458348476677653,0.957983193277311,même MLP et mêmes ensembles ; classes pondérées uniquement pour la perte pondérée
+1,perte_focale,42,11 descripteurs de base reconstruits,focale,60,64,0.9694444444444444,0.9675981642289176,0.9369747899159664,même MLP et mêmes ensembles ; classes pondérées uniquement pour la perte pondérée
+1,descripteurs_complets,42,descripteurs_complets,entropie croisée pondérée,60,64,0.9572222222222222,0.9569812525046316,0.957983193277311,familles de descripteurs reconstruites ; ablation sur validation
+1,descripteurs_sans_irregularite_RR,42,descripteurs_sans_irregularite_RR,entropie croisée pondérée,60,64,0.9533333333333334,0.9525625318522334,0.9453781512605042,familles de descripteurs reconstruites ; ablation sur validation
+1,descripteurs_sans_forme_QRS,42,descripteurs_sans_forme_QRS,entropie croisée pondérée,60,64,0.9627777777777777,0.9636839588155717,0.9705882352941176,familles de descripteurs reconstruites ; ablation sur validation
+1,descripteurs_sans_energie_par_bande,42,descripteurs_sans_energie_par_bande,entropie croisée pondérée,60,64,0.9611111111111111,0.9626639677376394,0.9663865546218487,familles de descripteurs reconstruites ; ablation sur validation
+1,seuil_FA_validation,42,11 descripteurs de base reconstruits,entropie_croisee_simple,60,64,,,0.9789915966386554,seuil=0.105686 ; spécificité_validation=0.949
+1,evaluation_test_finale,42,11 descripteurs de base reconstruits ; seuil fixé sur validation,entropie_croisee_simple,60,64,,,0.9714285714285714,test Holter : exactitude=0.961 ; F1 macro=0.959 ; spécificité FA=0.949 ; sensibilité FA=0.971
